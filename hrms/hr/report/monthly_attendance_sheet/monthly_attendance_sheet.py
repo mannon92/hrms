@@ -249,7 +249,7 @@ def get_attendance_map(filters: Filters) -> dict:
 				attendance_map.setdefault(employee, {}).setdefault(assigned_shift, {})
 
 			for day in days:
-				for shift in attendance_map[employee].keys():
+				for shift in attendance_map[employee]:
 					attendance_map[employee][shift][day] = "On Leave"
 
 	return attendance_map

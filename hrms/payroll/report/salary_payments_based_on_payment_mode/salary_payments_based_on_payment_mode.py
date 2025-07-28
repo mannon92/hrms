@@ -126,7 +126,7 @@ def get_total_based_on_mode_of_payment(data, mode_of_payments):
 	total = 0
 	total_row = {"branch": "Total"}
 	for mode in mode_of_payments:
-		sum_of_payment = sum([detail[mode] for detail in data if mode in detail.keys()])
+		sum_of_payment = sum(detail[mode] for detail in data if mode in detail)
 		total_row[mode] = sum_of_payment
 		total += sum_of_payment
 
