@@ -4,6 +4,7 @@
 
 import frappe
 from frappe import _
+from collections import deque
 
 
 @frappe.whitelist()
@@ -16,7 +17,7 @@ def get_all_nodes(method, company):
 
 	root_nodes = method(company=company)
 	result = []
-	nodes_to_expand = []
+	nodes_to_expand = deque()
 
 	for root in root_nodes:
 		data = method(root.id, company)
@@ -26,7 +27,7 @@ def get_all_nodes(method, company):
 		)
 
 	while nodes_to_expand:
-		parent = nodes_to_expand.pop(0)
+		parent = nodes_to_expand.popleft()
 		data = method(parent.get("id"), company)
 		result.append(dict(parent=parent.get("id"), parent_name=parent.get("name"), data=data))
 		for d in data:
