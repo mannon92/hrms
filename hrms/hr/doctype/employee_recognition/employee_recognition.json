@@ -1,0 +1,16 @@
+{
+ "doctype": "DocType",
+ "name": "Employee Recognition",
+ "module": "HR",
+ "custom": 0,
+ "fields": [
+  {"fieldname": "awarding_employee", "fieldtype": "Link", "options": "Employee", "label": "Awarding Employee"},
+  {"fieldname": "recognized_employee", "fieldtype": "Link", "options": "Employee", "label": "Recognized Employee"},
+  {"fieldname": "points", "fieldtype": "Int", "label": "Points"},
+  {"fieldname": "badge", "fieldtype": "Data", "label": "Badge"},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "permissions": [
+  {"role": "Employee", "read": 1, "write": 1, "create": 1}
+ ]
+}

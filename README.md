@@ -39,6 +39,7 @@ Initially, it was a set of modules within ERPNext but version 14 onwards, as the
 - **Performance Management**: Track goals, align goals with key result areas (KRAs), enable employees to evaluate themselves, make managing appraisal cycles easy.
 - **Payroll & Taxation**: Create salary structures, configure income tax slabs, run standard payroll, accomodate additional salaries and off cycle payments, view income breakup on salary slips and so much more.
 - **Frappe HR Mobile App**: Apply for and approve leaves on the go, check-in and check-out, access employee profile right from the mobile app.
+- **Employee Recognition**: Let peers award points or badges for accomplishments and redeem them for rewards.
 
 <details open>
 
